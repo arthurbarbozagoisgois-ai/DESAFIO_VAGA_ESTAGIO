@@ -29,7 +29,7 @@ print ('Imposto: ', imposto_msg)
 print (' ')
 
 imposto = (produto * 10) / 100
-custo_final = produto + imposto
+custo_final = produto + imposto + frete
 
 print ('Custo Total: ', custo_final)
 print ('Margem aplicada: ', margem_msg)
