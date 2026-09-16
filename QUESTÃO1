@@ -9,6 +9,7 @@ def ataque(vida,qtd):
     print("3 - Ataque Forte (40 de dano)")
     print (' ')
     escolha = input('Escolha seu ataque (1, 2 ou 3): ')
+    status = 'Vivo'
 
     if escolha == '1':
         print("Você usou o Ataque Fraco!","Tirou 10 de vida do inimigo!")
@@ -16,9 +17,13 @@ def ataque(vida,qtd):
         qtd = qtd + 1
         if vida < 0 or vida == 0:
                     vida = 0
+                    status = 'Derrotado'
+        else:
+            status = 'Vivo'
         print(' ')
         print ("Vida do inimigo: ", vida)
         print ("Quantidade de ataques: ", qtd)
+        print ("Status do inimigo: ", status)
 
     elif escolha == '2':
         print("Você usou o Ataque Médio!","Tirou 25 de vida do inimigo!")
@@ -26,10 +31,13 @@ def ataque(vida,qtd):
         qtd = qtd + 1
         if vida < 0 or vida == 0:
                     vida = 0
+                    status = 'Derrotado'
+        else:
+            status = 'Vivo'
         print(' ')
         print ("Vida do inimigo: ", vida)
         print ("Quantidade de ataques: ", qtd)
-   
+        print ("Status do inimigo: ", status)
 
     elif escolha == '3':
         print("Você usou o Ataque Forte!","Tirou 40 de vida do inimigo!")
@@ -37,10 +45,13 @@ def ataque(vida,qtd):
         qtd = qtd + 1
         if vida < 0 or vida == 0:
                     vida = 0
+                    status = 'Derrotado'
+        else:
+            status = 'Vivo'
         print(' ')
         print ("Vida do inimigo: ", vida)
         print ("Quantidade de ataques: ", qtd)
-
+        print ("Status do inimigo: ", status)
     else:
         print(' ')
         print("Ataque inválido! Tente novamente.")
@@ -54,6 +65,7 @@ def ataque(vida,qtd):
         print(' ')
         print("Parabéns! Você venceu a batalha!")
         print("Quantidade de ataques realizados: ", qtd)
+        print ('Status do inimigo: Derrotado')
         print(' ')
         print("Fim do jogo!")
 
@@ -63,5 +75,3 @@ print ('Você está em uma batalha contra um inimigo!')
 print ('Se seu inimigo chegar a 0 de vida, você vence!')
 print ('')
 a = ataque(vida,qtd)
-
-
