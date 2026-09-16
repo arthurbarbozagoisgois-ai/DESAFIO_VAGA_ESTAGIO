@@ -1,0 +1,60 @@
+vida = 100
+qtd = 0
+
+
+def ataque(vida,qtd):
+    print("Lista de ataques:")
+    print("1 - Ataque Fraco (10 de dano)")
+    print("2 - Ataque Médio (25 de dano)")
+    print("3 - Ataque Forte (40 de dano)")
+    print (' ')
+    escolha = input('Escolha seu ataque (1, 2 ou 3): ')
+
+    if escolha == '1':
+        print("Você usou o Ataque Fraco!","Tirou 10 de vida do inimigo!")
+        vida = vida - 10
+        qtd = qtd + 1
+        print(' ')
+        print ("Vida do inimigo: ", vida)
+        print ("Quantidade de ataques: ", qtd)
+
+    elif escolha == '2':
+        print("Você usou o Ataque Médio!","Tirou 25 de vida do inimigo!")
+        vida = vida - 20
+        qtd = qtd + 1
+        print(' ')
+        print ("Vida do inimigo: ", vida)
+        print ("Quantidade de ataques: ", qtd)
+   
+
+    elif escolha == '3':
+        print("Você usou o Ataque Forte!","Tirou 40 de vida do inimigo!")
+        vida = vida - 30
+        qtd = qtd + 1
+        print(' ')
+        print ("Vida do inimigo: ", vida)
+        print ("Quantidade de ataques: ", qtd)
+  
+    else:
+        print(' ')
+        print("Ataque inválido! Tente novamente.")
+        ataque(vida,qtd) 
+
+    while vida > 0:
+        ataque(vida,qtd)
+        break
+
+    if vida <= 0:
+        print(' ')
+        print("Parabéns! Você venceu a batalha!")
+        print("Quantidade de ataques realizados: ", qtd)
+        print(' ')
+        print("Fim do jogo!")
+
+print ('------ Bem vindo ao RPG ------')
+print (' ')
+print ('Você está em uma batalha contra um inimigo!')
+print ('Se seu inimigo chegar a 0 de vida, você vence!')
+print ('')
+a = ataque(vida,qtd)
+
