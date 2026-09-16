@@ -1,0 +1,36 @@
+margem = 0
+
+produto = int(input('Digite o valor do produto: '))
+print (' ')
+if produto <= 100:
+    margem = (30/100)
+    margem_msg = '30%'
+    frete = 10
+    imposto = 30/100
+    imposto_msg = '30%'
+    
+elif produto > 100 and produto <= 500:
+    margem = (20/100)
+    margem_msg = '20%'
+    imposto = 20/100
+    imposto_msg = '20%'
+    frete = 20
+elif produto > 500:
+    margem = (15/100)
+    margem_msg = '15%'
+    frete = 30
+    imposto = 10/100
+    imposto_msg = '10%'
+  
+
+print ('Valor do produto: R$', produto)
+print ('Frete: R$', frete)
+print ('Imposto: ', imposto_msg)
+print (' ')
+
+imposto = (produto * 10) / 100
+custo_final = produto + imposto
+
+print ('Custo Total: ', custo_final)
+print ('Margem aplicada: ', margem_msg)
+print ('Preço mínimo de venda: ', custo_final + (custo_final * margem))
