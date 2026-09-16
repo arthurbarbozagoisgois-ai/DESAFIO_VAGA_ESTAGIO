@@ -14,6 +14,8 @@ def ataque(vida,qtd):
         print("Você usou o Ataque Fraco!","Tirou 10 de vida do inimigo!")
         vida = vida - 10
         qtd = qtd + 1
+        if vida < 0 or vida == 0:
+                    vida = 0
         print(' ')
         print ("Vida do inimigo: ", vida)
         print ("Quantidade de ataques: ", qtd)
@@ -22,6 +24,8 @@ def ataque(vida,qtd):
         print("Você usou o Ataque Médio!","Tirou 25 de vida do inimigo!")
         vida = vida - 20
         qtd = qtd + 1
+        if vida < 0 or vida == 0:
+                    vida = 0
         print(' ')
         print ("Vida do inimigo: ", vida)
         print ("Quantidade de ataques: ", qtd)
@@ -31,10 +35,12 @@ def ataque(vida,qtd):
         print("Você usou o Ataque Forte!","Tirou 40 de vida do inimigo!")
         vida = vida - 30
         qtd = qtd + 1
+        if vida < 0 or vida == 0:
+                    vida = 0
         print(' ')
         print ("Vida do inimigo: ", vida)
         print ("Quantidade de ataques: ", qtd)
-  
+
     else:
         print(' ')
         print("Ataque inválido! Tente novamente.")
@@ -44,7 +50,7 @@ def ataque(vida,qtd):
         ataque(vida,qtd)
         break
 
-    if vida <= 0:
+    if vida < 0 or vida == 0:
         print(' ')
         print("Parabéns! Você venceu a batalha!")
         print("Quantidade de ataques realizados: ", qtd)
@@ -57,4 +63,5 @@ print ('Você está em uma batalha contra um inimigo!')
 print ('Se seu inimigo chegar a 0 de vida, você vence!')
 print ('')
 a = ataque(vida,qtd)
+
 
